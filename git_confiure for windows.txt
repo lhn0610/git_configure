@@ -1,5 +1,6 @@
 Windows安装、配置git：
 下载git windows版本，打开git Bash
+下载地址：https://git-scm.com/downloads
 $ git config --global user.name "Your Name"
 $ git config --global user.email "email@example.com"
 
