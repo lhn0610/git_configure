@@ -1,0 +1,34 @@
+Windows安装、配置git：
+下载git windows版本，打开git Bash
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+创建版本库：
+$ mkdir learngit
+$ cd learngit
+$ pwd
+/Users/michael/learngit
+
+
+远程仓库：
+第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
+$ ssh-keygen -t rsa -C "youremail@example.com"
+
+第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：
+
+然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+
+
+第3步：添加私秘钥到 $ ssh-add id_rsa（把ssh文件复制到当前目录下，如果添加失败可以先执行命令ssh-agent bash,然后再次添加私秘钥。）
+
+第4步：用 $ ssh -T git@github.com 判断是否绑定成功。如果返回successfully 表示成功
+
+第5步：已有的本地仓库与之关联
+$ git remote add origin git@github.com:user.name/repository_name.git
+
+第6步：本地仓库的内容推送到GitHub仓库
+$ git push -u origin master
+
+
+
+
