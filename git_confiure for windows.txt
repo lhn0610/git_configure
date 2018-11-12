@@ -30,6 +30,18 @@ $ git remote add origin git@github.com:user.name/repository_name.git
 第6步：本地仓库的内容推送到GitHub仓库
 $ git push -u origin master
 
-
+//创建版本库
+ git init
+//创建远程仓库,最后的字符串是github仓库的SSH key,可以看到我建立
+//的仓库叫test，
+ git remote add origin git@github.com:CodeofGame/test.git
+//创建一个文件 a.txt
+touch a.txt 
+ //将a.txt存入暂存区
+git add a.txt 
+//提交代码到本地仓库
+git commit -m "测试远程连接是否成功"
+//将你的代码提交到远程仓库的master分支下
+git push origin master
 
 
